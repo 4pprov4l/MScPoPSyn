@@ -1,0 +1,55 @@
+# MSc Synthetic Population Generation using Diffusion Models - A case study in Denmark
+
+This project utilised Generative Adversarial Networks to generate a representative Population of Denmark.
+The usecase for such population is the SimMobility Platform that models and simulates traffic scenarios in Denmark.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Requirements](#requirements)
+- [License](#license)
+
+## Installation
+
+DATGAN and ciDATGAN is publicly available on: https://github.com/glederrey/DATGAN
+Setup file is incldued.
+
+## Usage
+
+The project is separated in multiple dedicated notebooks and python scripts.
+The WGAN, DATGAN and ciDATGAN can be used wit the respected jupyter notebooks.
+
+To run DATGAN and ciDATGAN succesfully it is needed to follow the order of:
+0. Get acces to data
+1. Pre Processing
+- Check requirements of usecase and GAN inputs
+- Check Numerical Values
+2. GANs-Preparation
+- Setup Data types, Directed Acyclic Graphs, etc.
+- Preprocess Datatypes with DATGAN lib
+3. DatGan/ciDatGan
+- Load Data information
+- Load Preprossing Data from DATGAN lib (Define conditionals for ciDATGAN)
+- Train Model 
+4. Sample Data
+- Define Number of Samples (Define condionts for ciDATGAN)
+
+
+## Contributing
+
+Free of use
+
+
+## Requirements
+
+The project requires the following dependencies listed in the `requirements.txt` file.
+
+Also needed are the data from the national Transportation Survey TU, Denmark Statistic and OTM zones.
+
+
+## License
+
+Information about the project's license and any additional terms or conditions.
+

@@ -1,0 +1,8 @@
+pandas
+matplotlib
+tensorflow
+keras
+gpy
+gpyopt
+geopandas
+descartes

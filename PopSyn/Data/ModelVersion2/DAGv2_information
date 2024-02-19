@@ -1,0 +1,220 @@
+% This code uses the tikz package
+\begin{tikzpicture}
+\node (v0) at (0.460,0.510) {CarModelYear};
+\node (v1) at (0.189,0.675) {Education};
+\node (v2) at (0.573,0.571) {FamNumAdults};
+\node (v3) at (0.506,0.595) {FamNumPers};
+\node (v4) at (0.494,0.438) {FuelType};
+\node (v5) at (0.267,0.814) {Gender};
+\node (v6) at (0.393,0.366) {Handicap};
+\node (v7) at (0.421,0.801) {HomeAdrZone};
+\node (v8) at (0.522,0.760) {HomeParkPoss};
+\node (v9) at (0.412,0.654) {HousehAccOwnorRent};
+\node (v10) at (0.441,0.714) {HousehAccomodation};
+\node (v11) at (0.394,0.523) {HousehCarOwnership};
+\node (v12) at (0.550,0.646) {HousehNumAdults};
+\node (v13) at (0.490,0.666) {HousehNumPers};
+\node (v14) at (0.422,0.607) {HousehNumcars};
+\node (v15) at (0.206,0.548) {HwDayspW};
+\node (v16) at (0.380,0.740) {IncFamily2000};
+\node (v17) at (0.292,0.682) {IncRespondent2000};
+\node (v18) at (0.538,0.523) {KidsBetween0and15};
+\node (v19) at (0.589,0.470) {KidsBetween0and4};
+\node (v20) at (0.265,0.452) {ModeChainTypeDay};
+\node (v21) at (0.144,0.580) {MunicipalityDest};
+\node (v22) at (0.344,0.819) {MunicipalityOrigin};
+\node (v23) at (0.181,0.805) {PopSocio};
+\node (v24) at (0.107,0.717) {PosInFamily};
+\node (v25) at (0.179,0.487) {PrimModeDay};
+\node (v26) at (0.108,0.501) {PrimOccZone};
+\node (v27) at (0.0776,0.806) {RespAgeCorrect};
+\node (v28) at (0.265,0.383) {RespHasBicycle};
+\node (v29) at (0.171,0.414) {RespHasRejsekort};
+\node (v30) at (0.209,0.338) {RespHasSeasonticket};
+\node (v31) at (0.0782,0.348) {RespIsmemCarshare};
+\node (v32) at (0.251,0.738) {RespPrimOcc};
+\node (v33) at (0.0691,0.421) {ResphasDrivlic};
+\node (v34) at (0.341,0.615) {Sector};
+\node (v35) at (0.262,0.595) {WorkHourType};
+\node (v36) at (0.318,0.548) {WorkHoursPw};
+\node (v37) at (0.461,0.362) {Year};
+\draw [->] (v22) edge (v7);
+\draw [->] (v7) edge (v10);
+\draw [->] (v10) edge (v9);
+\draw [->] (v16) edge (v9);
+\draw [->] (v10) edge (v13);
+\draw [->] (v13) edge (v3);
+\draw [->] (v13) edge (v12);
+\draw [->] (v12) edge (v2);
+\draw [->] (v10) edge (v8);
+\draw [->] (v14) edge (v0);
+\draw [->] (v0) edge (v4);
+\draw [->] (v16) edge (v17);
+\draw [->] (v5) edge (v17);
+\draw [->] (v25) edge (v29);
+\draw [->] (v25) edge (v33);
+\draw [->] (v25) edge (v28);
+\draw [->] (v33) edge (v31);
+\draw [->] (v29) edge (v30);
+\draw [->] (v27) edge (v33);
+\draw [->] (v21) edge (v26);
+\draw [->] (v25) edge (v20);
+\draw [->] (v21) edge (v25);
+\draw [->] (v3) edge (v2);
+\draw [->] (v3) edge (v18);
+\draw [->] (v18) edge (v19);
+\draw [->] (v23) edge (v1);
+\draw [->] (v23) edge (v32);
+\draw [->] (v32) edge (v17);
+\draw [->] (v1) edge (v17);
+\draw [->] (v27) edge (v23);
+\draw [->] (v27) edge (v1);
+\draw [->] (v16) edge (v11);
+\draw [->] (v13) edge (v14);
+\draw [->] (v14) edge (v11);
+\draw [->] (v11) edge (v0);
+\draw [->] (v17) edge (v35);
+\draw [->] (v27) edge (v24);
+\draw [->] (v15) edge (v25);
+\draw [->] (v35) edge (v15);
+\draw [->] (v5) edge (v1);
+\draw [->] (v22) edge (v34);
+\draw [->] (v1) edge (v34);
+\draw [->] (v23) edge (v21);
+\draw [->] (v35) edge (v36);
+\end{tikzpicture}
+
+graph = nx.DiGraph()
+graph.add_edges_from([
+    ("CarModelYear", "FuelType"),
+    ("Education", "IncRespondent2000"),
+    ("Education", "Sector"),
+    ("FamNumPers", "FamNumAdults"),
+    ("FamNumPers", "KidsBetween0and15"),
+    ("Gender", "Education"),
+    ("Gender", "IncRespondent2000"),
+    ("HomeAdrZone", "HousehAccomodation"),
+    ("HousehAccomodation", "HomeParkPoss"),
+    ("HousehAccomodation", "HousehAccOwnorRent"),
+    ("HousehAccomodation", "HousehNumPers"),
+    ("HousehCarOwnership", "CarModelYear"),
+    ("HousehNumAdults", "FamNumAdults"),
+    ("HousehNumPers", "FamNumPers"),
+    ("HousehNumPers", "HousehNumAdults"),
+    ("HousehNumPers", "HousehNumcars"),
+    ("HousehNumcars", "CarModelYear"),
+    ("HousehNumcars", "HousehCarOwnership"),
+    ("HwDayspW", "PrimModeDay"),
+    ("IncFamily2000", "HousehAccOwnorRent"),
+    ("IncFamily2000", "HousehCarOwnership"),
+    ("IncFamily2000", "IncRespondent2000"),
+    ("IncRespondent2000", "WorkHourType"),
+    ("KidsBetween0and15", "KidsBetween0and4"),
+    ("MunicipalityDest", "PrimModeDay"),
+    ("MunicipalityDest", "PrimOccZone"),
+    ("MunicipalityOrigin", "HomeAdrZone"),
+    ("MunicipalityOrigin", "Sector"),
+    ("PopSocio", "Education"),
+    ("PopSocio", "MunicipalityDest"),
+    ("PopSocio", "RespPrimOcc"),
+    ("PrimModeDay", "ModeChainTypeDay"),
+    ("PrimModeDay", "RespHasBicycle"),
+    ("PrimModeDay", "RespHasRejsekort"),
+    ("PrimModeDay", "ResphasDrivlic"),
+    ("RespAgeCorrect", "Education"),
+    ("RespAgeCorrect", "PopSocio"),
+    ("RespAgeCorrect", "PosInFamily"),
+    ("RespAgeCorrect", "ResphasDrivlic"),
+    ("RespHasRejsekort", "RespHasSeasonticket"),
+    ("RespPrimOcc", "IncRespondent2000"),
+    ("ResphasDrivlic", "RespIsmemCarshare"),
+    ("WorkHourType", "HwDayspW"),
+    ("WorkHourType", "WorkHoursPw")
+])
+graph.add_node("Handicap")
+graph.add_node("Year")
+
+dag {
+CarModelYear [pos="0.460,-0.510"]
+Education [pos="0.189,-0.675"]
+FamNumAdults [pos="0.573,-0.571"]
+FamNumPers [pos="0.506,-0.595"]
+FuelType [pos="0.494,-0.438"]
+Gender [pos="0.267,-0.814"]
+Handicap [pos="0.393,-0.366"]
+HomeAdrZone [pos="0.421,-0.801"]
+HomeParkPoss [pos="0.522,-0.760"]
+HousehAccOwnorRent [pos="0.412,-0.654"]
+HousehAccomodation [pos="0.441,-0.714"]
+HousehCarOwnership [pos="0.394,-0.523"]
+HousehNumAdults [pos="0.550,-0.646"]
+HousehNumPers [pos="0.490,-0.666"]
+HousehNumcars [pos="0.422,-0.607"]
+HwDayspW [pos="0.206,-0.548"]
+IncFamily2000 [pos="0.380,-0.740"]
+IncRespondent2000 [pos="0.292,-0.682"]
+KidsBetween0and15 [pos="0.538,-0.523"]
+KidsBetween0and4 [pos="0.589,-0.470"]
+ModeChainTypeDay [pos="0.265,-0.452"]
+MunicipalityDest [pos="0.144,-0.580"]
+MunicipalityOrigin [pos="0.344,-0.819"]
+PopSocio [pos="0.181,-0.805"]
+PosInFamily [pos="0.107,-0.717"]
+PrimModeDay [pos="0.179,-0.487"]
+PrimOccZone [pos="0.108,-0.501"]
+RespAgeCorrect [pos="0.078,-0.806"]
+RespHasBicycle [pos="0.265,-0.383"]
+RespHasRejsekort [pos="0.171,-0.414"]
+RespHasSeasonticket [pos="0.209,-0.338"]
+RespIsmemCarshare [pos="0.078,-0.348"]
+RespPrimOcc [pos="0.251,-0.738"]
+ResphasDrivlic [pos="0.069,-0.421"]
+Sector [pos="0.341,-0.615"]
+WorkHourType [pos="0.262,-0.595"]
+WorkHoursPw [pos="0.318,-0.548"]
+Year [pos="0.461,-0.362"]
+CarModelYear -> FuelType
+Education -> IncRespondent2000
+Education -> Sector
+FamNumPers -> FamNumAdults
+FamNumPers -> KidsBetween0and15
+Gender -> Education
+Gender -> IncRespondent2000
+HomeAdrZone -> HousehAccomodation
+HousehAccomodation -> HomeParkPoss
+HousehAccomodation -> HousehAccOwnorRent
+HousehAccomodation -> HousehNumPers
+HousehCarOwnership -> CarModelYear
+HousehNumAdults -> FamNumAdults
+HousehNumPers -> FamNumPers
+HousehNumPers -> HousehNumAdults
+HousehNumPers -> HousehNumcars
+HousehNumcars -> CarModelYear
+HousehNumcars -> HousehCarOwnership
+HwDayspW -> PrimModeDay
+IncFamily2000 -> HousehAccOwnorRent
+IncFamily2000 -> HousehCarOwnership
+IncFamily2000 -> IncRespondent2000
+IncRespondent2000 -> WorkHourType
+KidsBetween0and15 -> KidsBetween0and4
+MunicipalityDest -> PrimModeDay
+MunicipalityDest -> PrimOccZone
+MunicipalityOrigin -> HomeAdrZone
+MunicipalityOrigin -> Sector
+PopSocio -> Education
+PopSocio -> MunicipalityDest
+PopSocio -> RespPrimOcc
+PrimModeDay -> ModeChainTypeDay
+PrimModeDay -> RespHasBicycle
+PrimModeDay -> RespHasRejsekort
+PrimModeDay -> ResphasDrivlic
+RespAgeCorrect -> Education
+RespAgeCorrect -> PopSocio
+RespAgeCorrect -> PosInFamily
+RespAgeCorrect -> ResphasDrivlic
+RespHasRejsekort -> RespHasSeasonticket
+RespPrimOcc -> IncRespondent2000
+ResphasDrivlic -> RespIsmemCarshare
+WorkHourType -> HwDayspW
+WorkHourType -> WorkHoursPw
+}
