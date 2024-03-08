@@ -1,0 +1,45 @@
+# DatGan and CiDatGan Version 6
+
+*** Changes ***
+Run with only 4 numerical values.
+Change the DAG completly
+
+*** Changes ***
+
+## Info 
+
+In this version we tried to get our first complete Model running.
+We used the minimum set of columns necessary for the transportation simulation models.
+
+The ciDatGan has been conditioned on the HomeAdrZones
+
+## Data based of Denmark Statistics and Transportation Survey
+- simulationData.csv
+
+
+### Generation
+- Input:
+    - train_set.csv
+- Output:
+    - DatGan_synthetic.csv
+    - ciDatGan_synthetic.csv
+
+- Model: Standard mdoel parameters. Batchsize = 1116, Epoch = 1000
+
+
+### Test
+- test_newCat.csv
+
+
+
+
+## Parameters
+
+### Datatypes
+- df_dtypes.json
+
+### Releations
+- relations.json
+
+### Graph
+- graph.adjlist

@@ -37,6 +37,15 @@ To run DATGAN and ciDATGAN succesfully it is needed to follow the order of:
 - Define Number of Samples (Define condionts for ciDATGAN)
 
 
+
+## Results
+
+The dolfer Datasets_reuslts holds all model results.
+The folder 'Populations processed for SImMobility' holds the post processed datasets for SimMobility
+
+
+
+
 ## Contributing
 
 Free of use

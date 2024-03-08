@@ -207,17 +207,25 @@ pyrightconfig.json
 
 # .gitignore file content
 
-PopSyn/Data/ModelVersion1/DatGan/encoded_data/encoded_data.pkl
-PopSyn/Data/ModelVersion1/ciDatGan/encoded_data/encoded_data.pkl
 
-PopSyn/Data/ModelVersion2/DatGan/encoded_data/encoded_data.pkl
-PopSyn/Data/ModelVersion2/ciDatGan/encoded_data/encoded_data.pkl
+PopSyn/Models_results
 
-PopSyn/Data/ModelVersion3/DatGan/encoded_data/encoded_data.pkl
-PopSyn/Data/ModelVersion3/ciDatGan/encoded_data/encoded_data.pkl
+PopSyn/Models/ModelVersion1/ciDatGan/output
+PopSyn/Models/ModelVersion1/ciDatGan/encoded_data/encoded_data.pkl
+PopSyn/Models/ModelVersion1/DatGan/output
+PopSyn/Models/ModelVersion1/DatGan/encoded_data/encoded_data.pkl
 
-PopSyn/Datasets
+PopSyn/Models/ModelVersion2/ciDatGan/output
+PopSyn/Models/ModelVersion2/ciDatGan/encoded_data/encoded_data.pkl
+PopSyn/Models/ModelVersion2/DatGan/output
+PopSyn/Models/ModelVersion2/DatGan/encoded_data/encoded_data.pkl
 
+PopSyn/Models/ModelVersion3/ciDatGan/output
+PopSyn/Models/ModelVersion3/ciDatGan/encoded_data/encoded_data.pkl
+PopSyn/Models/ModelVersion3/DatGan/output
+PopSyn/Models/ModelVersion3/DatGan/encoded_data/encoded_data.pkl
 
-
-
+PopSyn/Models/ModelVersion4/ciDatGan/output
+PopSyn/Models/ModelVersion4/ciDatGan/encoded_data/encoded_data.pkl
+PopSyn/Models/ModelVersion4/DatGan/output
+PopSyn/Models/ModelVersion4/DatGan/encoded_data/encoded_data.pkl
